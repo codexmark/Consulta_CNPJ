@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cnpj: MyString
+  razao_social: MyString
+  nome_fantasia: MyString
+  porte: MyString
+  natureza_juridica: MyString
+  situacao_cadastral: MyString
+  data_inicio_atividade: 2024-08-06
+  capital_social: 9.99
+  logradouro: MyString
+  numero: MyString
+  complemento: MyString
+  bairro: MyString
+  municipio: MyString
+  uf: MyString
+  cep: MyString
+  cnaes: MyText
+  socios: MyText
+
+two:
+  cnpj: MyString
+  razao_social: MyString
+  nome_fantasia: MyString
+  porte: MyString
+  natureza_juridica: MyString
+  situacao_cadastral: MyString
+  data_inicio_atividade: 2024-08-06
+  capital_social: 9.99
+  logradouro: MyString
+  numero: MyString
+  complemento: MyString
+  bairro: MyString
+  municipio: MyString
+  uf: MyString
+  cep: MyString
+  cnaes: MyText
+  socios: MyText
