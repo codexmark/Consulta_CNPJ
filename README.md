@@ -41,8 +41,8 @@ Para configurar o projeto, siga estas etapas:
 
 1. **Clone o repositório**:
    ```bash
-   git clone <url-do-repositorio>
-   cd <diretorio-do-projeto>
+   git clone https://github.com/codexmark/Consulta_CNPJ
+   cd Consulta_CNPJ
    ```
 
 2. **Instale as dependências**:
