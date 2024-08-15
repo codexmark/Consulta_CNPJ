@@ -1,0 +1,13 @@
+<h1>Banco de Consultas</h1>
+
+<div class="container">
+  <ul class="list-group">
+    <% @resultados.each do |resultado| %>
+      <li class="list-group-item">
+        <a href="<%= resultado_detalhes_path(resultado) %>">
+          <%= resultado.razao_social || 'Nome não disponível' %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

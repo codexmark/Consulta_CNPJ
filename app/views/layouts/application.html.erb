@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consulta CNPJ</title>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Consulta CNPJ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <%= link_to 'Home', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Consulta de CNPJ', consultas_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Resultados', resultados_path, class: 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <% if flash[:alert] %>
+    <div class="flash-alert" style="display: none;"><%= flash[:alert] %></div>
+  <% end %>
+
+  <%= yield %>
+</body>
+
+
+<footer class="footer bg-light py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>&copy; 2024 Consulta CNPJ - codexmark. Todos os direitos reservados.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item"><a href="#">Política de Privacidade</a></li>
+          <li class="list-inline-item"><a href="#">Desenvolvido em Ruby on Rails com ♥</a></li>
+          <li class="list-inline-item"><a href="mailto:codexmark@gmail.com">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</html>
+
+ 

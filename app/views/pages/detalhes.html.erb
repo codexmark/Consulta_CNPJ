@@ -1,0 +1,41 @@
+<h1>Detalhes do CNPJ</h1>
+
+<div class="container">
+  <% if @resultado %>
+    <h2><%= @resultado.razao_social || 'Nome não disponível' %></h2>
+
+    <p><strong>CNPJ:</strong> <%= @resultado.cnpj || 'Inexistente' %></p>
+    <p><strong>Nome Fantasia:</strong> <%= @resultado.nome_fantasia || 'Inexistente' %></p>
+    <p><strong>Porte:</strong> <%= @resultado.porte || 'Inexistente' %></p>
+    <p><strong>Natureza Jurídica:</strong> <%= @resultado.natureza_juridica || 'Inexistente' %></p>
+    <p><strong>Situação Cadastral:</strong> <%= @resultado.situacao_cadastral || 'Inexistente' %></p>
+    <p><strong>Data de Início da Atividade:</strong> <%= @resultado.data_inicio_atividade || 'Inexistente' %></p>
+    <p><strong>Capital Social:</strong> <%= @resultado.capital_social || 'Inexistente' %></p>
+    <p><strong>Logradouro:</strong> <%= @resultado.logradouro || 'Inexistente' %></p>
+    <p><strong>Número:</strong> <%= @resultado.numero || 'Inexistente' %></p>
+    <p><strong>Complemento:</strong> <%= @resultado.complemento || 'Inexistente' %></p>
+    <p><strong>Bairro:</strong> <%= @resultado.bairro || 'Inexistente' %></p>
+    <p><strong>Município:</strong> <%= @resultado.municipio || 'Inexistente' %></p>
+    <p><strong>UF:</strong> <%= @resultado.uf || 'Inexistente' %></p>
+    <p><strong>CEP:</strong> <%= @resultado.cep || 'Inexistente' %></p>
+    <p><strong>Telefone 1:</strong> <%= @resultado.telefone_1 || 'Inexistente' %></p>
+    <p><strong>Telefone 2:</strong> <%= @resultado.telefone_2 || 'Inexistente' %></p>
+
+    <% socios = JSON.parse(@resultado.socios || '[]') %>
+    <% if socios.present? && socios.any? %>
+      <h3>Sócios:</h3>
+      <ul>
+        <% socios.each do |socio| %>
+          <li><%= socio["nome_socio"] || 'Inexistente' %> (CNPJ/CPF: <%= socio["cnpj_cpf_do_socio"] || 'Inexistente' %>)</li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>Não há sócios registrados.</p>
+    <% end %>
+
+    <%= link_to 'Voltar', resultados_path, class: 'btn btn-secondary' %>
+  <% else %>
+    <p>Registro não encontrado.</p>
+    <%= link_to 'Voltar', resultados_path, class: 'btn btn-secondary' %>
+  <% end %>
+</div>

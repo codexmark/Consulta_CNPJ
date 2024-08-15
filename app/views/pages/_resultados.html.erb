@@ -1,0 +1,13 @@
+<% if resultados.present? %>
+  <% resultados.each do |resultado| %>
+    <% if resultado && resultado["nome"] %>
+      <h2><%= resultado["nome"] %></h2>
+      <p>CNPJ: <%= resultado["cnpj"] %></p>
+      <hr>
+    <% else %>
+      <h2>CNPJ não encontrado ou inválido</h2>
+    <% end %>
+  <% end %>
+<% else %>
+  <p>Nenhum resultado encontrado.</p>
+<% end %>

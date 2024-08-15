@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h1 class="text-center">Consulta de CNPJ</h1>
+  <p class="text-center">Insira um ou mais CNPJs, um por linha, para obter informações detalhadas.</p>
+
+  <div class="card p-4">
+    <%= form_tag("/consulta", method: "post", class: "form-group") do %>
+      <%= text_area_tag(:cnpjs, nil, placeholder: "Cole os CNPJs aqui...", rows: 10, class: "form-control mb-3") %>
+      <%= submit_tag("Consultar", class: "btn btn-primary btn-lg btn-block") %>
+    <% end %>
+  </div>
+
+  <div class="text-center mt-3">
+    <p>Status da API: <span class="status-<%= @api_status %>"><%= @api_status.capitalize %></span></p>
+    <p>Ou <a href="<%= resultados_path %>">clique aqui</a> para ver os resultados anteriores.</p>
+  </div>
+
+  
+</div>

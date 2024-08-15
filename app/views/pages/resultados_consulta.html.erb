@@ -1,0 +1,26 @@
+<h1>Resultados da Consulta</h1>
+
+<div class="container">
+  <% if @resultados.present? && @resultados.any? %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Razão Social</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @resultados.each do |resultado| %>
+          <tr>
+            <td><%= resultado.razao_social %></td>
+            <td><%= resultado.cnpj.present? ? 'CNPJ' : 'Outro' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>Nenhum resultado encontrado para a consulta.</p>
+  <% end %>
+
+  <%= link_to 'Voltar', consultas_path, class: 'btn btn-secondary' %>
+</div>

@@ -1,0 +1,17 @@
+<h1>Consulta de Dados Cadastrados</h1>
+
+<div class="container">
+  <%= form_with url: consultar_dados_path, method: :post, local: true do %>
+    <div class="form-group">
+      <%= label_tag :campo, "Selecione o campo para consulta:" %>
+      <%= select_tag :campo, options_for_select(@campos), { class: 'form-control' } %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :valor, "Digite o valor a ser consultado:" %>
+      <%= text_field_tag :valor, nil, class: 'form-control' %>
+    </div>
+
+    <%= submit_tag "Consultar", class: "btn btn-primary" %>
+  <% end %>
+</div>
