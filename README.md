@@ -61,6 +61,9 @@ Para configurar o projeto, siga estas etapas:
    rails server
    ```
 
+## Obs:
+O **Node** se faz necessário
+
 ## Contribuição
 
 Contribuições são bem-vindas!
