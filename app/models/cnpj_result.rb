@@ -1,3 +1,3 @@
 class CnpjResult < ApplicationRecord
-  # Adicione validações ou métodos, se necessário
+  # Adicione validações ou métodos sinta-se à vontade.
 end
