@@ -5,9 +5,9 @@ Este APP foi projetado para realizar pesquisas de dados do CNPJ (Cadastro Nacion
 
 O principal objetivo deste projeto é estudar o funcionamento do Ruby on Rails e aprender como consumir um endpoint de API, aproveitando a oportunidade para criar algo realmente útil.
 
-## Versão do Ruby
+## Versão do Ruby & Rails
 
-Este projeto usa a versão **3.3.4** do Ruby.
+Este projeto usa a versão **3.3.4** do Ruby e **7.1.3 >= 7.1.3.4** do rails
 
 ## Gems e Dependências
 
