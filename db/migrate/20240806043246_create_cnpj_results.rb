@@ -18,7 +18,6 @@ class CreateCnpjResults < ActiveRecord::Migration[6.0]
       t.string :cep
       t.text :cnaes
       t.text :socios
-
       t.timestamps
     end
   end

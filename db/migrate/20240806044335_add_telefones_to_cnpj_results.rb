@@ -4,3 +4,4 @@ class AddTelefonesToCnpjResults < ActiveRecord::Migration[7.1]
     add_column :cnpj_results, :telefone_2, :string
   end
 end
+
